@@ -1,0 +1,117 @@
+*{
+font-family: "Playfair", serif;}
+
+/* This css files is adding some nice style to our form */
+body{
+    background-image: url(/images/pc.jpg);
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 20px;
+}
+
+.d-flex{
+    display: flex;
+    flex-direction: column;  
+}
+
+form{
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 20px;
+}
+
+.title{
+    text-align: center;
+    color: #796D6D;
+    padding-top: 30px;
+    font-size: larger;
+}
+
+.h2{
+    margin: 0;
+    padding-top: 50px;
+    padding-left: 15px;
+}
+
+.required{
+    color: red;
+}
+
+label, table{
+    display:block;
+    color: #796D6D;
+    font-size: larger;
+}
+
+label>span{
+    float: left;
+    width:25%;
+    text-align: center;
+}
+
+input[type="tel"], input[type="text"], input[type="email"], select{
+    width: 50%;
+    height: 30px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border:1px solid #dadada;
+    color: #796D6D;
+    font-weight: bold;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+input[type="tel"]:hover,
+input[type="text"]:hover,
+input[type="email"]:hover,
+select:hover {
+    border-color: #796D6D;
+}
+
+select{
+    width: 50%;
+    height: 45px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.send{
+font-weight: bold;
+font-size: 30px;
+background-color: transparent;
+border-radius: 20px;
+border:transparent;
+color: black;
+margin-left: 190px;
+}
+
+.send:hover, .navbar:hover{
+    background-color: #e5bb9f;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    overflow:visible;
+    background:transparent;
+    font-family: "Playfair", serif;
+    display: flex;
+    flex-direction: row;
+    z-index: 1; /* Ensure navbar is on top */
+    border-radius: 20px;
+}
+
+.navbar a {
+    padding: 14px 18px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}

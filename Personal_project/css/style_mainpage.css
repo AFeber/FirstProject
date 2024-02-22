@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair", serif;
+    border-radius: 20px;
+}
+
+/* Button  a navbar*/
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    overflow:visible;
+    background:transparent;
+    font-family: "Playfair", serif;
+    display: flex;
+    flex-direction: row;
+    z-index: 1; /* Ensure navbar is on top */
+}
+
+.navbar a {
+    padding: 14px 18px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+    z-index: 1; /* Ensure dropdown is on top of everything */
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover,
+.dropbtn,
+.dropbtn:focus {
+    background-color: #e5bb9f;
+}
+
+.navbar a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Ensure dropdown is on top of everything */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text
+}
+/* change of color during hover */
+
+.dropdown-content:hover{
+    background-color: #ddd;
+}
+
+.show{
+    display: block;
+}
+/* Pages */
+body{
+    background: white;
+}
+
+ .main-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background-image:url(/images/pc.jpg);
+    background-size: cover;
+ }
+
+ .main-page .container{
+    margin-top: 100px;
+ }
+
+ .main-page h1{
+    font-size: 60px;
+ }
+
+ @media (max-width: 900px){
+    .main-page h1{
+        font-size: 40px;
+    }
+ }
+
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* nth-child for singular pages */
+section:nth-child(1){
+    color: #000000;
+    text-align: center;
+}
+section:nth-child(2){
+    color: #000000;
+    background-color: #e5bb9f;
+}
+section:nth-child(3){
+    color: #000000;
+}
+section:nth-child(4){
+    color: #000000;
+    background-color: #e5bb9f;
+}
+section .container{
+    margin: 100px;
+}
+section h1{
+    font-size: 60px;
+}
+section h2{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+/* Setting of the card text blocks */
+section .cards{
+    display: flex;
+}
+section .cards .text-card{
+    background: #88bfc5;
+    margin: 20px;
+    padding:20px;
+}
+section .cards .text-card h3{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+@media (max-width: 900px){
+    section h1{
+        font-size: 40px;
+    }
+
+    section .cards{
+        flex-direction: column;
+    }
+}
+
+/* Style of the on scroll transition */
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 3;
+
+}
